@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="Snapchat-690055648.jpg" alt="My Photo" class="hero-img" />
+    <h1>Hi, I'm Shivam</h1>
+    <p>Web Developer | Programer | Software Developer</p>
+    
+    <div class="hero-buttons">
+      <a href="#contact"><button class="btn btn-green">Hire Me</button></a>
+      <a href="Shivam_Chauhan_Resume (2).docx" target="_blank"><button class="btn btn-yellow">View Resume</button></a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>Hi, I’m Shivam, an 18-year-old tech enthusiast currently pursuing a B.Voc in Software Development.<br>
+      I enjoy building innovative tech projects and solving real-world problems. <br>
+      Passionate about continuous learning and exploring new technologies.</p>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React.js</div>
+      <div class="skill">DBMS</div>
+      <div class="skill">CORE JAVA</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+<section class="section" id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>JP Classes Website</h3>
+      <p>Simple landing page using HTML and CSS.</p>
+      <a href=": https://dellusr.github.io/jpclass.github.io/" target="_blank">
+        <button class="btn btn-light">View Project</button>
+      </a>
+    </div>
+    <div class="project">
+      <h3>AuthFlow (Sliding Form UI)</h3>
+      <p>Responsive login page with animations.</p>
+      <a href="https://dellusr.github.io/formsliding.github.io/" target="_blank">
+        <button class="btn btn-light">View Project</button>
+      </a>
+    </div>
+    <div class="project">
+      <h3>Ping Pong Game (pc)-v </h3>
+      <p>Game for pc using JavaScript.</p>
+      <a href="https://pingupongugmr.netlify.app/" target="_blank">
+        <button class="btn btn-light">View Project</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SHIVAM CHAUHAN. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
