@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BuildCraft Co.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+ <nav class="navbar">
+  <div class="logo">🏗️ BuildCraft</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <label class="theme-toggle">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </li>
+  </ul>
+</nav>
+
+
+  <header class="hero" id="hero">
+  <div class="hero-overlay">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>We Build Dreams, Brick by Brick</h1>
+      <p>Your trusted partner in construction excellence.</p>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+  <section id="about" class="about" data-aos="fade-up">
+    <h2>🧱 Who We Are</h2>
+    <p>BuildCraft is a trusted name in residential and commercial construction. From foundations to finishes — we do it all!</p>
+  </section>
+
+  <section id="projects" class="projects" data-aos="fade-up">
+    <h2>🏡 Our Projects</h2>
+    <div class="project-gallery">
+      <img src="https://i.pinimg.com/170x/46/d1/df/46d1dfd7de905e4da4f30bd7306f6f40.jpg" alt="Modern home"/>
+      <img src="https://64.media.tumblr.com/ecc4128ca926a461392b90b87ae47d82/tumblr_n5xz8vfGaZ1tc7d3jo2_400.pnj" alt="Office building"/>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7UBMHVuuz_vvoNhq5mbYP185Fezq6zGqlg&s" alt="Renovation site"/>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>📞 Contact Us</h2>
+   <form>
+  <input type="text" placeholder="Your name" required />
+  <input type="email" placeholder="Your email" required />
+  <textarea placeholder="Tell us about your project..." required></textarea>
+  <button type="submit">Send 💬</button>
+</form>
+
+  </section>
+
+  <!-- Chatbot Container -->
+<div class="chatbot-container">
+  <div id="chatWindow" class="chat-window"></div>
+  <div id="typingIndicator" class="typing-indicator" style="display:none;">Bot is typing...</div>
+  <input id="chatInput" placeholder="Ask me about building, pricing, or timelines..." autocomplete="off" />
+</div>
+
+
+  <footer>
+    <p>© 2025 BuildCraft Co. | All rights reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="script.js"></script>
+  <script>
+    const themeSwitch = document.getElementById("themeSwitch");
+
+  // Initialize based on system or previous choice
+  if (localStorage.getItem("theme") === "dark" || 
+      (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    document.body.classList.add("dark");
+    themeSwitch.checked = true;
+  }
+
+  themeSwitch.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+  });
+  </script>
+  <script>
+      // Select the contact form
+const contactForm = document.querySelector("form");
+
+contactForm.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent page refresh immediately
+
+  // Show prompt/message
+  alert("Our team member will shortly contact you.");
+
+  // Refresh the page after alert is closed
+  window.location.reload();
+});
+  </script>
+
+
+</body>
+</html>
